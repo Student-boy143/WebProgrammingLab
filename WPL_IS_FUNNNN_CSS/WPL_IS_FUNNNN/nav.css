@@ -1,0 +1,17 @@
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.books img {
+    width: 150px;
+    height: 220px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.books img:hover {
+    transform: scale(1.1);
+}

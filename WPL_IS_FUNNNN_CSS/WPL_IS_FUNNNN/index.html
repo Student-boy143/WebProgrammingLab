@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrossWord Book Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="layout.css">
+    
+    <style>
+        .links {
+            margin-top: 10px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .links a:hover {
+            color: #1abc9c;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header style="background-color:#2c3e50; padding:20px; border:3px solid #1abc9c;">
+    <div class="nav">
+        <div class="web-image">
+            <img src="book.jpg" class="store-logo" alt="Logo">
+            <div>
+                <h1 style="color:#1abc9c;">CrossWord</h1>
+                <p style="color:white; text-align:center;">
+                    Your Gateway to Knowledge
+                </p>
+            </div>
+        </div>
+
+        <nav class="links">
+            <a href="index.html">Home</a>
+            <a href="price-comparison.html">Price Table</a>
+            <a href="register.html">Register</a>
+            <a href="#">Cart</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="sale">
+    <img src="sale.jpg" usemap="#storemap" class="offer-image" alt="Banner">
+    <map name="storemap">
+        <area shape="rect" coords="0,0,450,300" href="new-arrivals.html" alt="New Arrivals">
+        <area shape="rect" coords="450,0,900,300" href="best-sellers.html" alt="Best Sellers">
+        <area shape="rect" coords="900,0,1350,300" href="offers.html" alt="Offers">
+    </map>
+</section>
+
+<main class="layout">
+
+<aside>
+    <h2><mark>Book Categories</mark></h2>
+
+    <h3>Top Categories</h3>
+    <ol>
+        <li><b>Fiction</b></li>
+        <li><b>Self Help</b></li>
+        <li><b>Business</b></li>
+    </ol>
+
+    <h3>Genres</h3>
+    <ul>
+        <li><i>Romance</i></li>
+        <li><i>Thriller</i></li>
+        <li><i>Fantasy</i></li>
+    </ul>
+
+    <h3>Formats</h3>
+    <dl>
+        <dt>Paperback</dt>
+        <dd>Lightweight Edition</dd>
+        <dt>Hardcover</dt>
+        <dd>Premium Binding</dd>
+        <dt>eBook</dt>
+        <dd>Digital Format</dd>
+    </dl>
+</aside>
+
+<section class="content">
+    <h2>Featured Books</h2>
+
+    <div class="books">
+        <figure>
+            <a href="psy_of_money.html">
+                <img src="book1.jpg" alt="The Psychology of Money" width="150" height="220">
+            </a>
+            <figcaption>The Psychology of Money</figcaption>
+        </figure>
+
+        <figure>
+            <a href="ikigai.html">
+                <img src="book2.jpg" alt="Ikigai" width="150" height="220">
+            </a>
+            <figcaption>Ikigai</figcaption>
+        </figure>
+
+        <figure>
+            <a href="manifest.html">
+                <img src="book3.jpg" alt="Manifest" width="150" height="220">
+            </a>
+            <figcaption>Manifest</figcaption>
+        </figure>
+
+        <figure>
+            <a href="atomic_habbits.html">
+                <img src="book4.jpg" alt="Atomic Habits" width="150" height="220">
+            </a>
+            <figcaption>Atomic Habits</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="details">
+    <h2>Today’s Deals</h2>
+    <iframe src="deals.html" width="100%" height="220" style="border:1px solid #ccc; border-radius:10px;"></iframe>
+</section>
+
+<section class="details">
+    <h2>Store Promotion</h2>
+
+    <video width="100%" height="300" controls autoplay loop muted>
+        <source src="promo.mp4" type="video/mp4">
+    </video>
+
+    <br><br>
+
+    <audio controls autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+</main>
+
+<footer>
+    © 2026 CrossWord Book Store
+</footer>
+
+</body>
+</html>
