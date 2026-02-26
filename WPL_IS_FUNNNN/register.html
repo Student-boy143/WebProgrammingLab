@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New User Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+<header>
+    <div class="nav">
+        <h1>New User Registration</h1>
+    </div>
+</header>
+
+<main class="details">
+
+<form>
+
+<fieldset>
+    <legend>Personal Information</legend>
+
+    <label for="name">Full Name</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter email" required><br><br>
+
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter password" required pattern=".{6,}"><br><br>
+
+    <label>Date of Birth</label><br>
+    <input type="date" required><br><br>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <legend>Preferences</legend>
+
+    <label>Gender</label><br>
+    <input type="radio" name="gender" required> Male
+    <input type="radio" name="gender"> Female
+    <input type="radio" name="gender"> Other
+    <br><br>
+
+    <label>Interested Categories</label><br>
+    <input type="checkbox"> Fiction
+    <input type="checkbox"> Self Help
+    <input type="checkbox"> Business
+    <br><br>
+
+    <label>Upload Profile Photo</label><br>
+    <input type="file" required>
+</fieldset>
+
+<br>
+
+<input type="submit" value="Register">
+
+</form>
+
+</main>
+
+<footer>
+    © 2026 CrossWord Book Store
+</footer>
+
+</body>
+</html>

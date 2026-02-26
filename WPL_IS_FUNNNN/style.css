@@ -1,0 +1,195 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(244, 246, 248);
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    color: rgb(44, 62, 80);
+}
+
+
+main.layout {
+    padding: 20px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+
+.books img {
+    border-radius: 8px;
+}
+
+.offer-image {
+    width: 80%;
+    max-width: 1200px;
+    display: block;
+    margin: 20px auto;
+}
+
+aside {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+aside {
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside ol li,
+aside ul li {
+    margin: 8px 0;
+    padding: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+aside ol li:hover,
+aside ul li:hover {
+    color: #1abc9c;
+    background-color: #f0fdf9;
+    cursor: pointer;
+}
+
+.books figure {
+    display: inline-block;
+    width: 180px;
+    margin: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    vertical-align: top;
+}
+
+.books figure img {
+    margin-bottom: 8px;
+}
+
+.books figcaption {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+
+
+
+
+/* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #ffeb3b;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.web-image {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.store-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.sale img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.layout {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+aside {
+    width: 25%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    width: 75%;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+figure {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.details {
+    padding: 40px;
+}
+
+article {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+} */

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrossWord Book Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="layout.css">
+    
+    <style>
+        .links {
+            margin-top: 10px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .links a:hover {
+            color: #1abc9c;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header style="background-color:#2c3e50; padding:20px; border:3px solid #1abc9c;">
+    <div class="nav">
+        <div class="web-image">
+            <img src="book.jpg" class="store-logo" alt="Logo">
+            <div>
+                <h1 style="color:#1abc9c;">CrossWord</h1>
+                <p id="welcome" style="color:white; text-align:center;"></p>
+            </div>
+        </div>
+
+        <nav class="links">
+            <a href="index.html">Home</a>
+            <a href="price-comparison.html">Price Table</a>
+            <a href="register.html">Register</a>
+            <a href="#">Cart</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="sale">
+    <img src="sale.jpg" usemap="#storemap" class="offer-image" alt="Banner">
+    <map name="storemap">
+        <area shape="rect" coords="0,0,450,300" href="new-arrivals.html" alt="New Arrivals">
+        <area shape="rect" coords="450,0,900,300" href="best-sellers.html" alt="Best Sellers">
+        <area shape="rect" coords="900,0,1350,300" href="offers.html" alt="Offers">
+    </map>
+</section>
+
+<main class="layout">
+
+<aside>
+    <h2><mark>Book Categories</mark></h2>
+
+    <h3>Top Categories</h3>
+    <ol>
+        <li><b>Fiction</b></li>
+        <li><b>Self Help</b></li>
+        <li><b>Business</b></li>
+    </ol>
+
+    <h3>Genres</h3>
+    <ul>
+        <li><i>Romance</i></li>
+        <li><i>Thriller</i></li>
+        <li><i>Fantasy</i></li>
+    </ul>
+
+    <h3>Formats</h3>
+    <dl>
+        <dt>Paperback</dt>
+        <dd>Lightweight Edition</dd>
+        <dt>Hardcover</dt>
+        <dd>Premium Binding</dd>
+        <dt>eBook</dt>
+        <dd>Digital Format</dd>
+    </dl>
+</aside>
+
+<section class="content">
+    <h2>Featured Books</h2>
+
+    <div id="welcomeMessage" style="background-color:#1abc9c; color:white; padding:15px; margin:10px 0; border-radius:5px; font-size:20px; font-weight:bold;"></div>
+
+    <div id="bookDetails" style="margin-top:20px; font-size:16px;"></div>
+
+    <div id="totalPrice" style="margin-top:15px; font-size:18px; font-weight:bold;"></div>
+
+    <div id="categoryResult" style="margin-top:15px; font-size:16px; color:#2c3e50;"></div>
+
+    <div id="bookList" style="margin-top:15px;">
+        <h3>Available Books:</h3>
+        <ul id="booksUl"></ul>
+    </div>
+
+    <div id="cartSection" style="margin-top:15px; font-size:16px;">
+        <h3>Shopping Cart:</h3>
+        <button onclick="addToCart('JavaScript')" style="padding:8px 15px; margin:5px; cursor:pointer;">Add JavaScript</button>
+        <button onclick="addToCart('Python')" style="padding:8px 15px; margin:5px; cursor:pointer;">Add Python</button>
+        <button onclick="addToCart('HTML')" style="padding:8px 15px; margin:5px; cursor:pointer;">Add HTML</button>
+        <div id="cartItems" style="margin-top:10px;"></div>
+    </div>
+
+    <div id="cartCount" style="margin-top:15px; font-size:16px; font-weight:bold;"></div>
+
+    <div id="searchResult" style="margin-top:15px; font-size:16px;"></div>
+
+    <div id="checkoutSection" style="margin-top:15px; font-size:16px; background-color:#ecf0f1; padding:15px; border-radius:5px;">
+        <h3>Checkout System:</h3>
+        <div id="checkoutTotal"></div>
+    </div>
+
+
+    <div class="books">
+        <figure>
+            <a href="psy_of_money.html">
+                <img src="book1.jpg" alt="The Psychology of Money" width="150" height="220">
+            </a>
+            <figcaption>The Psychology of Money</figcaption>
+        </figure>
+
+        <figure>
+            <a href="ikigai.html">
+                <img src="book2.jpg" alt="Ikigai" width="150" height="220">
+            </a>
+            <figcaption>Ikigai</figcaption>
+        </figure>
+
+        <figure>
+            <a href="manifest.html">
+                <img src="book3.jpg" alt="Manifest" width="150" height="220">
+            </a>
+            <figcaption>Manifest</figcaption>
+        </figure>
+
+        <figure>
+            <a href="atomic_habbits.html">
+                <img src="book4.jpg" alt="Atomic Habits" width="150" height="220">
+            </a>
+            <figcaption>Atomic Habits</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="details">
+    <h2>Today’s Deals</h2>
+    <iframe src="deals.html" width="100%" height="220" style="border:1px solid #ccc; border-radius:10px;"></iframe>
+</section>
+
+<section class="details">
+    <h2>Store Promotion</h2>
+
+    <video width="100%" height="300" controls autoplay loop muted>
+        <source src="promo.mp4" type="video/mp4">
+    </video>
+
+    <br><br>
+
+    <audio controls autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+</main>
+
+<footer>
+    © 2026 CrossWord Book Store
+</footer>
+
+<script>
+    document.getElementById("welcome").innerHTML = "Welcome to Online Book Shop";
+    document.getElementById("welcomeMessage").innerHTML = "Welcome to Online Book Shop";
+
+    let title = "The Psychology of Money";
+    let price = 399;
+    let inStock = true;
+
+    document.getElementById("bookDetails").innerHTML =
+        "<b>Book Title:</b> " + title + "<br>" +
+        "<b>Price:</b> ₹" + price + "<br>" +
+        "<b>Available:</b> " + inStock;
+
+    let bookPrice = 450;
+    let quantity = 3;
+
+    let totalPrice = bookPrice * quantity;
+
+    document.getElementById("totalPrice").innerHTML =
+        "Total Price = ₹" + totalPrice;
+
+    let finalPrice;
+
+    if (totalPrice > 1000) {
+        let discount = totalPrice * 0.10;
+        finalPrice = totalPrice - discount;
+    } else {
+        finalPrice = totalPrice;
+    }
+
+    document.getElementById("totalPrice").innerHTML =
+        "Total Price = ₹" + totalPrice + "<br>" +
+        "Final Price After Discount = ₹" + finalPrice;
+
+    let category = "programming";
+    let categoryMessage;
+    
+    switch(category) {
+        case "programming":
+            categoryMessage = "Programming Books";
+            break;
+        case "novel":
+            categoryMessage = "Novel Section";
+            break;
+        case "kids":
+            categoryMessage = "Kids Section";
+            break;
+        default:
+            categoryMessage = "General Section";
+    }
+    document.getElementById("categoryResult").innerHTML = "<b>Category:</b> " + categoryMessage;
+
+    
+    let booksArray = ["HTML", "CSS", "JavaScript", "Python"];
+    let booksUl = document.getElementById("booksUl");
+    
+    for (let i = 0; i < booksArray.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = booksArray[i];
+        booksUl.appendChild(li);
+    }
+
+    
+    let cart = [];
+    
+    function addToCart(bookName) {
+        cart.push(bookName);
+        displayCart();
+        updateCartCount();
+    }
+    
+    function displayCart() {
+        let cartItemsDiv = document.getElementById("cartItems");
+        if (cart.length === 0) {
+            cartItemsDiv.innerHTML = "Cart is empty";
+        } else {
+            cartItemsDiv.innerHTML = "<b>Books in cart:</b> " + cart.join(", ");
+        }
+    }
+    
+    
+    displayCart();
+
+    
+    function updateCartCount() {
+        let cartCountDiv = document.getElementById("cartCount");
+        cartCountDiv.innerHTML = "Items in cart: " + cart.length;
+    }
+    
+    updateCartCount();
+
+    let searchBook = "JavaScript";
+    let bookFound = false;
+    
+    for (let i = 0; i < booksArray.length; i++) {
+        if (booksArray[i] === searchBook) {
+            bookFound = true;
+            break;
+        }
+    }
+    
+    let searchResultDiv = document.getElementById("searchResult");
+    if (bookFound) {
+        searchResultDiv.innerHTML = "<b>Search Result:</b> Book Available";
+    } else {
+        searchResultDiv.innerHTML = "<b>Search Result:</b> Out of Stock";
+    }
+
+   
+    let priceCart = [450, 300, 250];
+    
+    function calculateTotal() {
+        let sum = 0;
+        for (let i = 0; i < priceCart.length; i++) {
+            sum = sum + priceCart[i];
+        }
+        return sum;
+    }
+    
+    let totalBill = calculateTotal();
+    document.getElementById("checkoutTotal").innerHTML = 
+        "<b>Cart Prices:</b> ₹" + priceCart.join(", ") + "<br>" +
+        "<b>Total Bill Amount:</b> ₹" + totalBill;
+</script>
+
+
+
+</body>
+</html>

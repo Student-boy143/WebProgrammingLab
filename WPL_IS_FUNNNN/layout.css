@@ -1,0 +1,17 @@
+
+.layout {
+    display: flex;
+    gap: 20px;
+}
+
+aside {
+    width: 25%;
+}
+
+.content {
+    width: 75%;
+}
+
+footer {
+    margin-top: 20px;
+}
