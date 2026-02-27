@@ -1,71 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>New User Registration</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="form.css">
-</head>
-<body>
-
-<header>
-    <div class="nav">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form.css" />
+    <style>
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
         <h1>New User Registration</h1>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main class="details">
+    <main class="details">
+      <form id="registerForm" onsubmit="return validateForm();">
+        <fieldset>
+          <legend>Personal Information</legend>
 
-<form>
+          <label for="name">Full Name</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            autofocus
+          />
+          <span id="nameError" class="error"></span>
+          <br />
 
-<fieldset>
-    <legend>Personal Information</legend>
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+          />
+          <span id="emailError" class="error"></span>
+          <br />
 
-    <label for="name">Full Name</label><br>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br><br>
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+          />
+          <span id="passwordError" class="error"></span>
+          <br />
 
-    <label for="email">Email</label><br>
-    <input type="email" id="email" name="email" placeholder="Enter email" required><br><br>
+          <label for="dob">Date of Birth</label><br />
+          <input type="date" id="dob" name="dob" />
+          <span id="dobError" class="error"></span>
+          <br />
+        </fieldset>
 
-    <label for="password">Password</label><br>
-    <input type="password" id="password" name="password" placeholder="Enter password" required pattern=".{6,}"><br><br>
+        <br />
 
-    <label>Date of Birth</label><br>
-    <input type="date" required><br><br>
-</fieldset>
+        <fieldset>
+          <legend>Preferences</legend>
 
-<br>
+          <label>Gender</label><br />
+          <input type="radio" name="gender" value="Male" /> Male
+          <input type="radio" name="gender" value="Female" /> Female
+          <input type="radio" name="gender" value="Other" /> Other
+          <span id="genderError" class="error"></span>
+          <br /><br />
 
-<fieldset>
-    <legend>Preferences</legend>
+          <label>Interested Categories</label><br />
+          <input type="checkbox" name="category" value="Fiction" /> Fiction
+          <input type="checkbox" name="category" value="Self Help" /> Self Help
+          <input type="checkbox" name="category" value="Business" /> Business
+          <span id="categoryError" class="error"></span>
+          <br /><br />
+        </fieldset>
 
-    <label>Gender</label><br>
-    <input type="radio" name="gender" required> Male
-    <input type="radio" name="gender"> Female
-    <input type="radio" name="gender"> Other
-    <br><br>
+        <br />
 
-    <label>Interested Categories</label><br>
-    <input type="checkbox"> Fiction
-    <input type="checkbox"> Self Help
-    <input type="checkbox"> Business
-    <br><br>
+        <input type="submit" value="Register" />
+      </form>
+    </main>
 
-    <label>Upload Profile Photo</label><br>
-    <input type="file" required>
-</fieldset>
+    <footer>© 2026 CrossWord Book Store</footer>
 
-<br>
+    <script>
+      function validateForm() {
+        let isValid = true;
 
-<input type="submit" value="Register">
+        document
+          .querySelectorAll(".error")
+          .forEach((span) => (span.textContent = ""));
 
-</form>
+        const name = document.getElementById("name").value.trim();
+        if (name === "") {
+          document.getElementById("nameError").textContent =
+            "Name must not be blank.";
+          isValid = false;
+        }
 
-</main>
+        const email = document.getElementById("email").value.trim();
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+        if (email === "") {
+          document.getElementById("emailError").textContent =
+            "Email must not be blank.";
+          isValid = false;
+        } else if (!emailPattern.test(email)) {
+          document.getElementById("emailError").textContent =
+            "Enter a valid email address.";
+          isValid = false;
+        }
 
-<footer>
-    © 2026 CrossWord Book Store
-</footer>
+        const password = document.getElementById("password").value;
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+        if (!passwordPattern.test(password)) {
+          document.getElementById("passwordError").textContent =
+            "Password must be at least 6 characters, include letters and numbers.";
+          isValid = false;
+        }
 
-</body>
+        const dob = document.getElementById("dob").value;
+        if (dob === "") {
+          document.getElementById("dobError").textContent =
+            "Date of Birth is required.";
+          isValid = false;
+        } else {
+          const today = new Date();
+          const birthDate = new Date(dob);
+          let age = today.getFullYear() - birthDate.getFullYear();
+          const m = today.getMonth() - birthDate.getMonth();
+          if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+          }
+          if (age < 18) {
+            document.getElementById("dobError").textContent =
+              "You must be at least 18 years old.";
+            isValid = false;
+          }
+        }
+
+        const gender = document.querySelector('input[name="gender"]:checked');
+        if (!gender) {
+          document.getElementById("genderError").textContent =
+            "Select your gender.";
+          isValid = false;
+        }
+
+        const categories = document.querySelectorAll(
+          'input[name="category"]:checked',
+        );
+        if (categories.length === 0) {
+          document.getElementById("categoryError").textContent =
+            "Select at least one category.";
+          isValid = false;
+        }
+
+        return isValid;
+      }
+    </script>
+  </body>
 </html>
